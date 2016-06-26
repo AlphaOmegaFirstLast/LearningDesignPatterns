@@ -1,0 +1,24 @@
+﻿public class DoubleCheckLockSingleton
+{
+        private static DoubleCheckLockSingleton _instance;
+        private static readonly object _mylock = new object();
+
+        private DoubleCheckLockSingleton()
+        {
+        }
+
+        public static DoubleCheckLockSingleton GetInstance()
+        {
+            if (_instance == null)
+            {
+                lock (_mylock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new DoubleCheckLockSingleton();
+                    }
+                }
+            }
+            return _instance;
+        }
+ }

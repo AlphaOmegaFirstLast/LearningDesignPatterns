@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Test Movie Web Api</title>
+</head>
+<body>
+
+    <div>
+        <table class="table table-hover table-striped input-sm">
+            <thead>
+                <tr class="myGradient">
+                    <th class="col-xs-2">Method</th>
+                    <th class="col-xs-9">Parameters</th>
+                    <th class="col-xs-1">Execute</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="success">
+                    <td>apiDesignPatterns/GetFactory</td>
+                    <td><input type="text" class="form-control input-sm" value='/2' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+                <tr class="active">
+                    <td>apiDesignPatterns/GetFactoryMethod</td>
+                    <td><input type="text" class="form-control input-sm" value='/2' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+                <tr class="success">
+                    <td>apiDesignPatterns/GetSimpleSingleton</td>
+                    <td><input type="text" class="form-control input-sm" value='' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+                <tr class="active">
+                    <td>apiDesignPatterns/GetDoubleCheckLockSingleton</td>
+                    <td><input type="text" class="form-control input-sm" value='' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+                <tr class="success">
+                    <td>apiDesignPatterns/GetEagerLoadSingleton</td>
+                    <td><input type="text" class="form-control input-sm" value='' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+                <tr class="active">
+                    <td>apiDesignPatterns/GetStrategy</td>
+                    <td><input type="text" class="form-control input-sm" value='/2' /></td>
+                    <td><input type="button" class="btn btn-xs btn-block btn-info" onclick='executeTestMethod(this)' value='Get'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+    <br />
+    <div class="form-group">
+        <label>Result</label>
+        <textarea id="resultPanel" class="form-control" rows="20"></textarea>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/site.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿public class EagerLoadSingleton
+{
+        private static readonly EagerLoadSingleton _instance = new EagerLoadSingleton();
+
+        private EagerLoadSingleton()
+        {
+        }
+
+        public static EagerLoadSingleton GetInstance()
+        {
+            return _instance;
+        }
+}

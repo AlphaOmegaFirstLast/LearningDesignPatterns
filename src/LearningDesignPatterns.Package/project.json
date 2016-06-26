@@ -1,0 +1,23 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "LearningDesignPatterns.Package Class Library",
+  "authors": [ "Suzette" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "dependencies": {
+    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+    "Microsoft.AspNet.Session": "1.0.0-beta8",
+    "Microsoft.AspNet.WebApi.Client": "5.2.3"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Net.Http": "4.0.0.0",
+        "System.XML": "4.0.0.0"
+      }
+    }
+    }
+  }
+

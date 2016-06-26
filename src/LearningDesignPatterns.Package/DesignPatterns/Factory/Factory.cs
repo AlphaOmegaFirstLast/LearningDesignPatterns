@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using LearningBeta08.Package.SystemManagers;
+using LearningBeta08.Package.SystemModels;
+
+namespace LearningBeta08.Package.DesignPatterns.Factory
+{
+    public interface IFactory
+    {
+        IProduct GetProduct(int config);
+    }
+    //----------------------------
+    public class Factory: IFactory
+    {
+        public IProduct GetProduct(int config)
+        {
+            switch (config)
+            {
+                case 1:
+                    return new Product1();                   
+                case 2:
+                    return new Product2();
+                default:
+                    return null;
+            }
+        }
+    }
+    //----------------------------
+    public interface IProduct
+    {
+        Task<ApiResponse<string>> GetExample(string appBasePath);
+    }
+    //----------------------------
+
+    class Product1 : IProduct
+    {
+        public async Task<ApiResponse<string>> GetExample(string appBasePath)
+        {
+            var textFileManager = new TextFileManager();
+            var example = await textFileManager.ReadText(appBasePath + "/App_Data/DesignPatternsExamples/Factory.txt");
+            example.Data = "Called from Product1: " + Environment.NewLine + example.Data;
+            return example;
+        }
+    }
+    //----------------------------
+
+    class Product2 : IProduct
+    {
+        public async Task<ApiResponse<string>> GetExample(string appBasePath)
+        {
+            var textFileManager = new TextFileManager();
+            var example = await textFileManager.ReadText(appBasePath + "/App_Data/DesignPatternsExamples/Factory.txt");
+            example.Data = "Called from Product1: " + Environment.NewLine + example.Data;
+            return example;
+        }
+    }
+}
